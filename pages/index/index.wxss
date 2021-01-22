@@ -1,0 +1,134 @@
+@import "../../resource/iconfont/iconfont.wxss";
+page {
+  background-color: #333;
+}
+
+.nowTime {
+  margin-top: 30rpx;
+  font: normal normal normal 96rpx/96rpx scans-serif;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.TheTime {
+  font: normal normal normal 12px/16px scans-seirf;
+  color: #fff;
+  text-align: center;
+}
+
+.hourNumber, .minuteNumber, .secondNumber {
+  display: inline-block;
+}
+
+.hourNumberBox, .minuteNumberBox, .secondNumberBox {
+  width: 50rpx;
+  height: 76rpx;
+}
+
+.numberImg {
+  display: block;
+}
+
+.symbol {
+  height: 76rpx;
+  width: 34rpx;
+  /* background-color:rgba(255,255,255,.5); */
+}
+
+.dot {
+  background-color: #fff;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 40rpx;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.symbol .dot:nth-child(2) {
+  top: 60%;
+}
+
+.timePercentBox {
+  width: 596rpx;
+  height: 40rpx;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  display: block;
+  margin: 10rpx auto;
+  border-radius: 40rpx;
+  z-index: 10;
+}
+.sentence{
+  width: 596rpx;
+  margin:20rpx auto;
+  font:normal 200 normal 28rpx/36rpx scans-serif;
+  color:#fff;
+  text-align: center;
+}
+.scaleBox {
+  width: 596rpx;
+  height: 1px;
+  margin: 10px auto;
+}
+
+.scaleUnderLine {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.timeUsed {
+  left: -1px;
+  top: -1px;
+  height: 40rpx;
+  background-color:#60ab60;
+  /* background-image: linear-gradient(90deg, #60ab60 0%, #60ab60 4.9%, #e8f6e8 5%, #e8f6e8 6%, #60ab60 6.1%, #60ab60 100%); */
+  width: 90%;
+  z-index: -1;
+  border-radius: 40rpx;
+  /* animation: percent 14s infinite linear; */
+  transition: all .3s;
+}
+
+.ruler {
+  left: 0%;
+  bottom: 10px;
+  /* background-color: #fff; */
+  width: 28rpx;
+  height: 28rpx;
+  transition: all .3s;
+}
+
+@keyframes percent {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 596rpx 0;
+  }
+}
+
+.arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 14rpx solid #fff;
+  border-left: 14rpx solid transparent;
+  border-right: 14rpx solid transparent;
+  border-bottom: 14rpx solid transparent;
+  transform:translateX(-50%);
+  left:50%;
+  bottom:0px;
+}
+
+.rulerCenter{
+  left:0px;
+  bottom:0px;
+  transform:translate(-50%,30%);
+  padding-bottom:30rpx;
+}

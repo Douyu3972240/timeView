@@ -1,0 +1,53 @@
+.themeWidth{
+  width:88%;
+}
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+.clearFloat::after,.clearFloat::before{
+  content: "";
+  overflow:hidden;
+  clear: both;
+  display: block;
+}
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+
+.FnButton{
+  padding: 10rpx 20rpx;
+  border:1px solid #fff;
+  border-radius:100rpx;
+  box-sizing: border-box;
+  display:inline-block;
+}
+.moreFnIcon,.moreFnText{
+  display:inline-block;
+  color:#fff;
+  font-size:60rpx !important;
+  line-height:60rpx;
+  vertical-align: middle;
+}
+
+.moreFnText{
+  font-size:28rpx !important;
+  margin-left:6rpx;
+  
+}

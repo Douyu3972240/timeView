@@ -1,0 +1,60 @@
+@import "../../resource/iconfont/iconfont.wxss";
+
+page {
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+}
+.page{
+  padding-top:100rpx;
+}
+.competition {
+  margin: 20rpx auto;
+}
+
+.show {
+  width: 33.3%;
+  text-align: center;
+}
+
+.showIcon {
+  font-size: 100rpx !important;
+  line-height: 140rpx;
+  color:#fcfcfc;
+}
+.hintText{
+  font-weight: 300;
+}
+.hintText, .choice {
+  width: 25%;
+  text-align: center;
+  font-size: 36rpx !important;
+  line-height: 50rpx;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.userChoice {
+  margin: 80rpx auto;
+}
+
+.choice {
+  font-size: 50rpx !important;
+}
+.competitionResult{
+  opacity: 0;
+  animation: fadeIn .3s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(4,4);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(2,2);
+  }
+}

@@ -1,0 +1,26 @@
+<view>
+  <view class="content">
+    <swiper class="swiper absolute overflowHidden">
+      <block wx:for="{{list}}" wx:for-item="q" wx:for-index="i" wx:key="i">
+        <swiper-item wx:if="{{i < list.length-1}}">
+          <navigator class="navigatorTag relative" url="{{q.url}}">
+            <view class="title">{{q.title}}</view>
+            <view class="content">{{q.describe}}</view>
+            <view class="enter absolute">使用</view>
+            <view class="pageNumber absolute">{{i+1}}/{{list.length}}</view>
+          </navigator>
+        </swiper-item>
+
+        <swiper-item wx:if="{{i == list.length-1}}">
+          <view class="develop navigatorTag relative" style="display:table;">
+            <view style="text-align:center;display:table-cell;vertical-align: middle;text-indent:0em;">
+              <view class="iconfont iconkaifa" style="color:#1889ea;font-size:200rpx;line-height:200rpx;"></view>
+              <view style="font:300 normal normal 14px/18px scans-serif;color:#333;">{{q.describe}}</view>
+            </view>
+            <view class="pageNumber absolute">{{i+1}}/{{list.length}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

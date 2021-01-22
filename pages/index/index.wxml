@@ -1,0 +1,72 @@
+<view class="page">
+  <view>
+    <view class="nowTime">
+      <view class="hourNumber overflowHidden">
+        <view class="hourNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.hour[0]}}.png"></image>
+        </view>
+        <view class="hourNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.hour[1]}}.png"></image>
+        </view>
+        <view class="symbol relative floatRight">
+          <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
+          <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
+        </view>
+      </view>
+      <view class="minuteNumber overflowHidden">
+        <view class="minuteNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.minute[0]}}.png"></image>
+        </view>
+        <view class="minuteNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.minute[1]}}.png"></image>
+        </view>
+        <view class="symbol relative floatRight">
+          <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
+          <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
+        </view>
+      </view>
+      <view class="secondNumber overflowHidden">
+        <view class="secondNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.second[0]}}.png"></image>
+        </view>
+        <view class="secondNumberBox floatLeft">
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.second[1]}}.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="TheTime">The time is</view>
+  </view>
+
+
+  <view style="margin:200rpx auto 0px auto;">
+    <view class="scaleBox relative">
+      <view class="scaleUnderLine"></view>
+      <block wx:for="{{scaleArr}}" wx:for-index="k" wx:key="k">
+        <view class="itemScale absolute" style="bottom:0px;background-color:#fff;width:1px;height:10rpx;left:{{k*10}}%;"></view>
+      </block>
+      <view class="ruler absolute" style="left:{{percent}}%;">
+        <view class="rulerCenter absolute">
+          <view style="color:#fff;font-size:12px;line-height:12px;width:100%;text-align:center;">{{percent}}%</view>
+          <view class="arrow absolute"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="timePercentBox">
+      <view class="timeSum relative">
+        <view class="timeUsed absolute" style="width:{{percent}}%;"></view>
+      </view>
+    </view>
+    <view class="sentence">
+      <block wx:for="{{animationSentence[showSentenceIndex]}}" wx:for-item="i" wx:for-index="p" wx:key="p">
+        <text style="transition: all {{i.duration}}ms;opacity:{{i.opacity}};">{{i.text}}</text>
+      </block>
+    </view>
+  </view>
+  <navigator url="../moreFnList/moreFnList" style="text-align:center;left:50%;bottom:10%;transform:translateX(-50%);" class="fixed">
+    <view class="FnButton">
+      <view class="moreFnIcon iconfont icongengduogongneng"></view>
+      <view class="moreFnText">更多功能</view>
+    </view>
+  </navigator>
+</view>

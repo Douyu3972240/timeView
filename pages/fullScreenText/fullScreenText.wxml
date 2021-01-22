@@ -1,0 +1,49 @@
+<view>
+  <view>
+    <view class="line overflowHidden">
+      <view class="lineLeft floatLeft">文字：</view>
+      <view class="lineRight floatLeft">
+        <input bindinput="inputWord" class="inputText" type="text" placeholder="请输入需要显示在屏幕上的文字" placeholder-class="color:#999;" value="{{inputText}}" />
+      </view>
+    </view>
+    <view class="themeWidth overflowHidden" style="margin:10rpx auto;">
+      <view class="selectColorText floatLeft" style="font:300 normal normal 36rpx/36rpx scans-serif;padding:10rpx 0px;margin:10rpx 0px;">背景色</view>
+      <view class="selectColorValue floatLeft">
+        <view bindtap="select" data-value="{{backgroundColor}}" data-key="backgroundColor" class="colorBlock relative" style="background-color:{{backgroundColor}};"></view>
+      </view>
+    </view>
+    <view class="themeWidth overflowHidden" style="margin:10rpx auto;">
+      <view class="selectColorText floatLeft" style="font:300 normal normal 36rpx/36rpx scans-serif;padding:10rpx 0px;margin:10rpx 0px;">文字颜色</view>
+      <view class="selectColorValue floatLeft">
+        <view bindtap="select" data-value="{{frontColor}}" data-key="frontColor" class="colorBlock relative" style="background-color:{{frontColor}};">
+        </view>
+      </view>
+    </view>
+    <view class="themeWidth overflowHidden" style="margin:10rpx auto;">
+      <view class="selectColorText floatLeft" style="font:300 normal normal 36rpx/36rpx scans-serif;padding:10rpx 0px;margin:10rpx 0px;">文字大小</view>
+      <view class="selectColorValue floatLeft">
+        <slider bindchange="changeEnd" data-key="fontSize" min="100" max="300" show-value="true"></slider>
+      </view>
+    </view>
+    <view class="themeWidth overflowHidden" style="margin:10rpx auto;">
+      <view class="selectColorText floatLeft" style="font:300 normal normal 36rpx/36rpx scans-serif;padding:10rpx 0px;margin:10rpx 0px;">滚动速度</view>
+      <view class="selectColorValue floatLeft">
+        <slider bindchange="changeEnd" data-key="fontSpeed" min="100" max="300" show-value="true"></slider>
+      </view>
+    </view>
+    <view bindtap="begin" class="themeWidth confirmButton">确定</view>
+  </view>
+
+  <view wx:if="{{isShowFullText}}" class="fixed" style="left:0px;top:0px;width:{{sysInfo.windowWidth}}px;height:{{sysInfo.windowHeight}}px;background-color:{{backgroundColor}};z-index:999;">
+  <!-- <view style="position:absolute;left:0px;top:0px;width:50%;word-wrap:break-word;">{{elementInfoStr}}time:{{animationTime}}</view> -->
+    <view class="text absolute" id="text" animation="{{animate}}" style="bottom:-{{elementInfo.height}}px;width:{{fontSize}}px;line-height:{{fontSize}}px;text-align:center;z-index:1;">
+      <block wx:for="{{text}}" wx:for-item="i" wx:for-index="p" wx:key="p">
+        <text style="font-size:{{fontSize}}px;color:{{frontColor}};" class="everoneWord">{{i}}</text>
+      </block>
+    </view>
+    <view bindtap="close" class="fixed" style="z-index:1;right:20rpx;bottom:20rpx;font-size:12px;color:#f00;transform:rotateZ(90deg);">关闭</view>
+  </view>
+</view>
+<view wx:if="{{pick}}">
+  <color-picker bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}"></color-picker>
+</view>

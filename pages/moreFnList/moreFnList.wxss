@@ -1,0 +1,54 @@
+@import "../../resource/iconfont/iconfont.wxss";
+page{
+  background-color:#333;
+  width:100%;
+  height:100%;
+}
+.swiper{
+  width:600rpx;
+  height:800rpx;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:#fff;
+  border-radius:8rpx;
+}
+.title{
+  font:300 normal normal 40rpx/40rpx scans-serif;
+  color:#333;
+  text-indent: 0px;
+}
+.navigatorTag{
+  display: block;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  padding:30rpx;
+}
+.content{
+  padding-top:20rpx;
+  font:300 normal normal 28rpx/36rpx scans-serif;
+  color:#333;
+  text-indent: 2em;
+}
+.enter{
+  background-color:#f40;
+  left:50%;
+  bottom:10%;
+  transform:translateX(-50%);
+  font:300 normal normal 14px/14px scans-serif;
+  text-align:center;
+  width:34%;
+  padding:30rpx 0px;
+  border-radius:100rpx;
+  color:#fff;
+  text-indent: 0em;
+}
+
+.pageNumber{
+   font:300 normal normal 12px/12px scans-serif;
+   color:#999;         
+   bottom:2%;
+   left:3%;
+   text-indent: 0em;
+}

@@ -1,0 +1,26 @@
+<!-- 石头剪刀布 -->
+<view class="page">
+
+  <view class="themeWidth competition clearFloat">
+    <view class="show floatLeft relative">
+      <view class="showIcon iconfont {{userChoice == null ? 'iconshitou' : userChoice.icon}}"></view>
+      <view style="font-size:12px;font-weight:300;left:50%;bottom:-15%;transform:translateX(-50%);color:#fdfdfd;" class="absolute">用户</view>
+    </view>
+    <view class="show floatLeft">
+      <view class="showIcon iconfont iconvs" style="font-size:140rpx !improtant;transform:scale(2,2);"></view>
+    </view>
+    <view class="show floatLeft relative">
+      <view class="showIcon iconfont  {{robot == null ? 'iconjiandao' : robot.icon}} " style="transform:rotateY(180deg);"></view>
+      <view style="font-size:12px;font-weight:300;left:50%;bottom:-15%;transform:translateX(-50%);color:#fdfdfd;" class="absolute">人机</view>
+    </view>
+  </view>
+
+
+  <view class="themeWidth userChoice clearFloat" wx:if="{{isChoice}}">
+    <view class="hintText floatLeft">请选择:</view>
+    <view bindtap="{{isChoice ? 'choice' : ''}}" data-type="0" class="choice floatLeft iconfont iconshitou"></view>
+    <view bindtap="{{isChoice ? 'choice' : ''}}" data-type="2" class="choice floatLeft iconfont iconjiandao"></view>
+    <view bindtap="{{isChoice ? 'choice' : ''}}" data-type="1" class="choice floatLeft iconfont iconbu"></view>
+  </view>
+</view>
+<image wx:if="{{competitionResult.length}}" mode="aspectFit" class="fixed competitionResult" style="width:264rpx;height:140rpx;left:50%;top:50%;transform:translate(-50,-50%) scale(2,2);" src="../../resource/images/{{competitionResult}}.png"></image>

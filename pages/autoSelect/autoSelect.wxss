@@ -1,0 +1,95 @@
+@import "../../resource/iconfont/iconfont.wxss";
+
+page {
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  margin: 20rpx auto;
+  width: 88%;
+  border-radius: 8rpx;
+  border: 1px solid #fff;
+}
+
+.inputText, .lineLeft {
+  padding: 10rpx 0px;
+  font: 300 normal normal 28rpx/44rpx scans-serif;
+  min-height: 44rpx;
+  height: 44rpx;
+}
+
+.lineRight {
+  width: 70%;
+  padding: 0px 8rpx;
+  box-sizing: border-box;
+}
+
+.inputText, .lineLeft {
+  color: #fff;
+  padding: 10rpx 0px;
+  min-height: 44rpx;
+  height: 44rpx;
+}
+
+.append, .beginChoose {
+  margin: 60rpx auto;
+  border-radius: 8rpx;
+  text-align: center;
+  background-color: #f40;
+  font: 300 normal normal 28rpx/28rpx scans-serif;
+  padding: 20rpx 0px;
+  color: #fff;
+  transition:  all .3s;
+}
+
+.userChoose {
+  margin: 40rpx auto;
+  border-radius: 8rpx;
+}
+
+.selectView {
+  width: 30%;
+  margin: 20rpx 1.665%;
+  text-align: center;
+  font: 300 normal normal 32rpx/32rpx scans-serif;
+  padding: 20rpx 0px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 4rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.deleteIcon {
+  font-size: 28rpx !important;
+  color: #f00;
+  right: 4rpx;
+  top: 2rpx;
+}
+
+.countdown {
+  width: 552rpx;
+  height: 800rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(4, 4);
+  opacity: 0;
+  animation: fadeIn 1000ms;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(-50%, -50%) scale(4, 4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0.5, 0.5);
+    opacity: 1;
+  }
+}

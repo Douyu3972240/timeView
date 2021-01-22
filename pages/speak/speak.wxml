@@ -1,0 +1,24 @@
+<view class="page overflowHidden">
+
+  <view class="themeWidth inputNameBox relative">
+    <input bindinput="inputName" maxlength="8" class="inputName" type="text" placeholder="请输入Ta的名字，不填则对所有人公开" placeholder-style="color:rgba(255,255,255,.7);" value="{{currentInput}}"></input>
+    <view bindtap="confirm" class="confirm absolute">确定</view>
+  </view>
+
+  <view wx:if="{{inputName.length}}" class="themeWidth overflowHidden" style="margin:10rpx auto;">
+    <block wx:for="{{inputName}}" wx:for-item="i" wx:for-key="k" wx:key="k">
+      <view class="nameEveyone floatLeft relative">{{i}} <view class="deteleIcon iconfont iconshanchu absolute"></view> </view>
+    </block>
+  </view>
+
+  <view class="next themeWidth">下一步</view>
+
+  <textarea bindinput="paragraph" class="paragraph themeWidth">
+
+  </textarea>
+  <view>
+    {{paragraph}}
+  </view>
+
+
+</view>

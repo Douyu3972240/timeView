@@ -1,0 +1,58 @@
+{
+  "id": "2172487",
+  "name": "时间",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14367436",
+      "name": "vs",
+      "font_class": "vs",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "1760743",
+      "name": "石头",
+      "font_class": "shitou",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "1760746",
+      "name": "剪刀",
+      "font_class": "jiandao",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "1760747",
+      "name": "布",
+      "font_class": "bu",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "8965778",
+      "name": "删 除 (1)",
+      "font_class": "shanchu",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "16780669",
+      "name": "开发",
+      "font_class": "kaifa",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "6195961",
+      "name": "更多功能",
+      "font_class": "gengduogongneng",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}

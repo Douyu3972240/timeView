@@ -1,0 +1,20 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/moreFnList/moreFnList",
+    "pages/fullScreenText/fullScreenText",
+    "pages/autoSelect/autoSelect",
+    "pages/miniGame01/miniGame01",
+    "pages/test01/test01",
+    "pages/speak/speak"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

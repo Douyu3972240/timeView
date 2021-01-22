@@ -1,0 +1,44 @@
+<view>
+
+  <view class="page overflowHidden">
+    <view class="line overflowHidden">
+      <view class="lineLeft floatLeft" style="width:30%;text-align:center;background-color:#fff;color:#333;">选择
+        <text wx:if="{{chooseArr.length < 12}}">{{addChooseNumber}}</text> </view>
+      <view class="lineRight floatLeft" style="width:70%;">
+        <input bindinput="inputChoose" class="inputText" type="text" placeholder="请输入需要显示在屏幕上的文字" placeholder-class="color:#fff;" value="{{inputText}}"></input>
+      </view>
+    </view>
+    <view bindtap="append" class="themeWidth append">添加</view>
+
+
+
+    <view class="themeWidth overflowHidden userChoose">
+      <block wx:for="{{chooseArr}}" wx:for-item="i" wx:for-index="k" wx:key="k">
+        <view class="selectView floatLeft overflowHidden relative" style="{{randomChoose === k ? 'background-color:#fff;color:#f40;border-color:#fff;':''}}">
+          {{i}}
+          <view bindtap="delete" data-text="{{i}}" data-index="{{k}}" class="iconfont iconshanchu absolute deleteIcon"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view style="text-align:center;margin:0px auto;" class="{{beginTime > 0 ? 'themeWidth' : ''}}">
+    <view bindtap="reset" class="themeWidth beginChoose" style="{{beginTime > 0 && chooseArr.length > 0 ? 'width:40%;display:inline-block;opacity:1;' : 'width:0%;display:inline-block;float:left;opacity:0;'}}">
+      清空选项
+    </view>
+    <view bindtap="beginChoose" wx:if="{{chooseArr.length > 1}}" class="themeWidth beginChoose" style="{{beginTime > 0 ? 'width:40%;display:inline-block;margin-left:10%;' : ''}}">
+      {{beginTime == 0 ? '开始帮我选择' : '帮我再选一次'}}
+    </view>
+  </view>
+
+
+
+  <view class="layer fixed" wx:if="{{isShowAutoChoose}}" style="width:{{sysInfo.windowWidth}}px;height:{{sysInfo.windowHeight}}px;left:0px;top:0px;background-color:rgba(0,0,0,.05);">
+    <block wx:for="{{number}}" wx:for-index="i" wx:key="i" wx:for-item="k">
+      <image wx:if="{{countdown == k}}" mode="aspectFit" class="countdown absolute" src="../../resource/number/{{k}}.png"></image>
+    </block>
+
+  </view>
+
+
+</view>
