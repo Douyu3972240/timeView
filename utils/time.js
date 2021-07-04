@@ -1,7 +1,7 @@
 function getYMDHMS() {
   //按照json格式返回年月日时分秒
   let date = new Date();
-
+   
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   month = month * 1 < 10 ? `0${month}` : month;
