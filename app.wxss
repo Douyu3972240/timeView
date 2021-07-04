@@ -1,6 +1,15 @@
-.themeWidth{
-  width:88%;
+.themeWidth {
+  width: 88%;
 }
+
+.themeColor {
+  color: #2179d4 !important;
+}
+
+.themeBackgroundColor {
+  background-color: #2179d4 !important;
+}
+
 .relative {
   position: relative;
 }
@@ -16,12 +25,15 @@
 .overflowHidden {
   overflow: hidden;
 }
-.clearFloat::after,.clearFloat::before{
+
+.clearFloat::after,
+.clearFloat::before {
   content: "";
-  overflow:hidden;
+  overflow: hidden;
   clear: both;
   display: block;
 }
+
 .floatLeft {
   float: left;
 }
@@ -31,23 +43,49 @@
 }
 
 
-.FnButton{
+.FnButton {
   padding: 10rpx 20rpx;
-  border:1px solid #fff;
-  border-radius:100rpx;
+  border: 1px solid #fff;
+  border-radius: 100rpx;
   box-sizing: border-box;
-  display:inline-block;
+  display: inline-block;
 }
-.moreFnIcon,.moreFnText{
-  display:inline-block;
-  color:#fff;
-  font-size:60rpx !important;
-  line-height:60rpx;
+
+.moreFnIcon,
+.moreFnText {
+  display: inline-block;
+  color: #fff;
+  font-size: 60rpx !important;
+  line-height: 60rpx;
   vertical-align: middle;
 }
 
-.moreFnText{
-  font-size:28rpx !important;
-  margin-left:6rpx;
-  
+.moreFnText {
+  font-size: 28rpx !important;
+  margin-left: 6rpx;
+}
+
+
+
+.omit {
+  /* 单行溢出省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.omit-2 {
+  /* 第二行溢出省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.omit-3 {
+  /* 第二行溢出省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }

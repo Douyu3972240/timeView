@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "8192135",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "17228682",
+      "name": "选择",
+      "font_class": "xuanze",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "9833499",
+      "name": "游戏",
+      "font_class": "youxi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "14367436",
       "name": "vs",
       "font_class": "vs",

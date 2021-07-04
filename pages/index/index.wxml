@@ -3,10 +3,12 @@
     <view class="nowTime">
       <view class="hourNumber overflowHidden">
         <view class="hourNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.hour[0]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.hour[0]}}.png"></image>
         </view>
         <view class="hourNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.hour[1]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.hour[1]}}.png"></image>
         </view>
         <view class="symbol relative floatRight">
           <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
@@ -15,10 +17,12 @@
       </view>
       <view class="minuteNumber overflowHidden">
         <view class="minuteNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.minute[0]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.minute[0]}}.png"></image>
         </view>
         <view class="minuteNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.minute[1]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.minute[1]}}.png"></image>
         </view>
         <view class="symbol relative floatRight">
           <view class="dot absolute" style="{{timeUnit.second[1]%2 ? 'opacity:.3' : ''}}"></view>
@@ -27,10 +31,12 @@
       </view>
       <view class="secondNumber overflowHidden">
         <view class="secondNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.second[0]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.second[0]}}.png"></image>
         </view>
         <view class="secondNumberBox floatLeft">
-          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;" src="/resource/number/{{timeUnit.second[1]}}.png"></image>
+          <image class="numberImg" mode="aspectFit" style="width:100%;height:100%;"
+            src="/resource/number/{{timeUnit.second[1]}}.png"></image>
         </view>
       </view>
     </view>
@@ -42,7 +48,8 @@
     <view class="scaleBox relative">
       <view class="scaleUnderLine"></view>
       <block wx:for="{{scaleArr}}" wx:for-index="k" wx:key="k">
-        <view class="itemScale absolute" style="bottom:0px;background-color:#fff;width:1px;height:10rpx;left:{{k*10}}%;"></view>
+        <view class="itemScale absolute"
+          style="bottom:0px;background-color:#fff;width:1px;height:10rpx;left:{{k*10}}%;"></view>
       </block>
       <view class="ruler absolute" style="left:{{percent}}%;">
         <view class="rulerCenter absolute">
@@ -63,10 +70,58 @@
       </block>
     </view>
   </view>
-  <navigator url="../moreFnList/moreFnList" style="text-align:center;left:50%;bottom:10%;transform:translateX(-50%);" class="fixed">
+
+  <view class="swiperView">
+
+    <swiper bindchange="changeSwiper" circular="{{true}}" class="swiperElement" current="{{changeSwiper}}">
+      <swiper-item>
+        <view class="swiperItemView">
+          <view class="swiperItemTitle omit relative">全屏弹幕</view>
+          <view class="describeText absolute">
+            <view class="omit-3">
+              全屏弹幕可瞬间让手机变神奇，全屏滚动文字，想象下在演唱会在开车时，看到喜欢的人就秀出你的联系方式
+            </view>
+          </view>
+          <view class="iconfont iconquanping absolute {{changeSwiper == 0 ? 'fullText' : ''}} "></view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItemView">
+          <view class="swiperItemTitle omit relative">自动选择</view>
+          <view class="describeText absolute">
+            <view class="omit-3">
+              是不是选择困难症？是不是选项多到不知所措？点我吧，帮你解决一切烦恼
+            </view>
+          </view>
+          <view class="iconfont iconxuanze absolute {{changeSwiper == 1 ? 'autoSelector' : ''}}"></view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItemView">
+          <view class="swiperItemTitle omit relative">石头剪刀布</view>
+          <view class="describeText absolute">
+            <view class="omit-3">
+              童年的回忆，现在还能记得什么时候玩过它吗？还能说出儿时小伙伴的名字吗？
+            </view>
+          </view>
+          <view class="iconfont iconyouxi absolute {{changeSwiper == 2 ? 'game01' : ''}} "></view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="numberDot themeWidth">
+    <view class="dotItem {{changeSwiper == 0 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
+    <view class="dotItem {{changeSwiper == 1 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
+    <view class="dotItem {{changeSwiper == 2 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
+  </view>
+
+
+
+
+  <!-- <navigator url="../moreFnList/moreFnList" style="text-align:center;left:50%;bottom:10%;transform:translateX(-50%);" class="fixed">
     <view class="FnButton">
       <view class="moreFnIcon iconfont icongengduogongneng"></view>
       <view class="moreFnText">更多功能</view>
     </view>
-  </navigator>
+  </navigator> -->
 </view>

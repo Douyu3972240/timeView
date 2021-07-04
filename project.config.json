@@ -39,7 +39,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.0",
+  "libVersion": "2.17.0",
   "appid": "wxda14132faa82ca80",
   "projectname": "timeView",
   "debugOptions": {
