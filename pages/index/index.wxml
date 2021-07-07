@@ -1,4 +1,5 @@
 <view class="page">
+
   <view>
     <view class="nowTime">
       <view class="hourNumber overflowHidden">
@@ -71,11 +72,12 @@
     </view>
   </view>
 
-  <view class="swiperView">
 
+
+  <view class="swiperView">
     <swiper bindchange="changeSwiper" circular="{{true}}" class="swiperElement" current="{{changeSwiper}}">
       <swiper-item>
-        <view class="swiperItemView">
+        <navigator url="../fullScreenText/fullScreenText" class="swiperItemView">
           <view class="swiperItemTitle omit relative">全屏弹幕</view>
           <view class="describeText absolute">
             <view class="omit-3">
@@ -83,10 +85,10 @@
             </view>
           </view>
           <view class="iconfont iconquanping absolute {{changeSwiper == 0 ? 'fullText' : ''}} "></view>
-        </view>
+        </navigator>
       </swiper-item>
       <swiper-item>
-        <view class="swiperItemView">
+        <navigator url="../autoSelect/autoSelect" class="swiperItemView">
           <view class="swiperItemTitle omit relative">自动选择</view>
           <view class="describeText absolute">
             <view class="omit-3">
@@ -94,10 +96,10 @@
             </view>
           </view>
           <view class="iconfont iconxuanze absolute {{changeSwiper == 1 ? 'autoSelector' : ''}}"></view>
-        </view>
+        </navigator>
       </swiper-item>
       <swiper-item>
-        <view class="swiperItemView">
+        <navigator url="../miniGame01/miniGame01" class="swiperItemView">
           <view class="swiperItemTitle omit relative">石头剪刀布</view>
           <view class="describeText absolute">
             <view class="omit-3">
@@ -105,6 +107,23 @@
             </view>
           </view>
           <view class="iconfont iconyouxi absolute {{changeSwiper == 2 ? 'game01' : ''}} "></view>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItemView">
+          <view class="swiperItemTitle omit relative">更多idea</view>
+          <view class="describeText absolute">
+            <view class="omit-3 break-all">
+              目前该小程序由作者一人开发完成。如果你有好的建议或意见可以email<text bindtap="copyEmail" class="email"
+                decode="true">&lt;1301326083@qq.com&gt;</text>
+            </view>
+          </view>
+          <view class="hconMore absolute clearFloat {{changeSwiper == 3 ? 'moreIdea' : ''}}">
+            <view class="moreBlock"></view>
+            <view class="moreBlock {{changeSwiper == 3 ? 'moreIdeaBlock' : ''}}"></view>
+            <view class="moreBlock"></view>
+            <view class="moreBlock"></view>
+          </view>
         </view>
       </swiper-item>
     </swiper>
@@ -113,6 +132,7 @@
     <view class="dotItem {{changeSwiper == 0 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
     <view class="dotItem {{changeSwiper == 1 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
     <view class="dotItem {{changeSwiper == 2 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
+    <view class="dotItem {{changeSwiper == 3 ? 'dotItemActive themeBackgroundColor' : ''}}"></view>
   </view>
 
 

@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    beginTime:0,  //用户点击帮我选择的次数 
+    randomClass: "linear-gradient", //给添加的选项加上随机的class
+    beginTime: 0, //用户点击帮我选择的次数 
     countdown: 3, //默认从第3秒开始倒计时
     sysInfo: null,
     number: [],
@@ -16,15 +17,15 @@ Page({
     }, //管理时间的变量
     chooseArr: [], //用户输入的所有选项
     addChooseNumber: 1, //用于提示用户当前是添加的第几个选择,
-    randomChoose:"", //程序帮用户选中了第几个
+    randomChoose: "", //程序帮用户选中了第几个
   },
-  reset(){
+  reset() {
     let _this = this
     _this.setData({
-      chooseArr:[],
-      randomChoose:"",
-      beginTime:0,
-      addChooseNumber:1
+      chooseArr: [],
+      randomChoose: "",
+      beginTime: 0,
+      addChooseNumber: 1
     })
   },
   beginChoose() {
@@ -39,12 +40,12 @@ Page({
     clearInterval(_this.data.timer.countdown)
     clearInterval(_this.data.timer.randomer)
 
-    _this.data.timer.randomer = setInterval( ()=>{
+    _this.data.timer.randomer = setInterval(() => {
       _this.setData({
         randomChoose: parseInt(Math.random() * _this.data.chooseArr.length)
       })
       console.log(`randomChoose:${_this.data.randomChoose}`)
-    },100)
+    }, 100)
 
     _this.data.timer.countdown = setInterval(() => {
       _this.data.countdown = _this.data.countdown - 1
@@ -53,10 +54,10 @@ Page({
         clearInterval(_this.data.timer.randomer)
         _this.setData({
           isShowAutoChoose: false,
-          countdown:3
+          countdown: 3
         })
         wx.showToast({
-          title: `这次选中了 ${_this.data.chooseArr[_this.data.randomChoose]} 哦~~`,
+          title: `这次选中了 ${_this.data.chooseArr[_this.data.randomChoose].text} 哦~~`,
           icon: "none"
         })
       } else {
@@ -82,7 +83,7 @@ Page({
             }
           }
           _this.setData({
-            addChooseNumber: _this.data.chooseArr.length+1,
+            addChooseNumber: _this.data.chooseArr.length + 1,
             chooseArr: _this.data.chooseArr
           })
         }
@@ -91,7 +92,7 @@ Page({
   },
   append() {
     //开始添加
-    
+
     let _this = this
     console.log(`_this.data.chooseArr.length:${_this.data.chooseArr.length}`)
     if (_this.data.inputText.length == 0) {
@@ -113,21 +114,22 @@ Page({
       })
       return false
     }
-    _this.data.chooseArr.push(_this.data.inputText)
+    _this.data.randomClass = "linear-gradient"
+    _this.data.chooseArr.push({
+      text: _this.data.inputText,
+      class: `${_this.data.randomClass}${parseInt(Math.random()*3)+1}`
+    })
     _this.data.addChooseNumber = _this.data.chooseArr.length + 1
-    
+
     _this.setData({
       addChooseNumber: _this.data.addChooseNumber,
       chooseArr: _this.data.chooseArr
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       _this.setData({
         inputText: ""
       })
-    },10)
-
-
-
+    }, 10)
   },
   inputChoose(e) {
     let _this = this
@@ -139,7 +141,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: `${app.time.getYMDHMS().year}/${app.time.getYMDHMS().month}/${app.time.getYMDHMS().day}`,
     })
@@ -157,28 +159,28 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
     let _this = this
     clearInterval(_this.data.timer.countdown)
     clearInterval(_this.data.timer.randomer)
@@ -187,21 +189,21 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

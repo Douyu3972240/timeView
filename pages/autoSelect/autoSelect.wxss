@@ -10,10 +10,12 @@ page {
   margin: 20rpx auto;
   width: 88%;
   border-radius: 8rpx;
-  border: 1px solid #fff;
+  border: 1px solid #2179d4;
+  font-weight: 400;
 }
 
-.inputText, .lineLeft {
+.inputText,
+.lineLeft {
   padding: 10rpx 0px;
   font: 300 normal normal 28rpx/44rpx scans-serif;
   min-height: 44rpx;
@@ -26,22 +28,41 @@ page {
   box-sizing: border-box;
 }
 
-.inputText, .lineLeft {
+.inputText,
+.lineLeft {
   color: #fff;
   padding: 10rpx 0px;
   min-height: 44rpx;
   height: 44rpx;
 }
 
-.append, .beginChoose {
+.append,
+.beginChoose {
   margin: 60rpx auto;
   border-radius: 8rpx;
   text-align: center;
-  background-color: #f40;
   font: 300 normal normal 28rpx/28rpx scans-serif;
   padding: 20rpx 0px;
   color: #fff;
-  transition:  all .3s;
+  transition: all .3s;
+}
+
+.beginChoose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0060B8;
+  box-shadow: 0 1px 1px 1px #222;
+}
+
+.startChoose {
+  font-size: 36rpx;
+  margin-right: 8rpx;
+}
+
+.append {
+  font-weight: 400;
+  box-shadow: 0 1px 1px 1px #222;
 }
 
 .userChoose {
@@ -54,21 +75,19 @@ page {
   margin: 20rpx 1.665%;
   text-align: center;
   font: 300 normal normal 32rpx/32rpx scans-serif;
-  padding: 20rpx 0px;
+  padding: 60rpx 0px;
   color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  border-radius: 4rpx;
+  border: 0px solid rgba(255, 255, 255, 0);
+  border-radius: 8rpx;
   text-overflow: ellipsis;
   white-space: nowrap;
+  box-sizing: border-box;
+  transition: all .3s;
 }
 
 .deleteIcon {
-  font-size: 28rpx !important;
-  color: #f00;
-  right: 4rpx;
-  top: 2rpx;
+  font-size: 32rpx !important;
+  color: #fff;
 }
 
 .countdown {
@@ -80,6 +99,24 @@ page {
   opacity: 0;
   animation: fadeIn 1000ms;
   animation-fill-mode: both;
+}
+
+.deleteIconBox {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 8rpx 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.currentChoose {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 4rpx solid rgba(255, 255, 255, .9);
+  top: 0;
+  left: 0;
 }
 
 @keyframes fadeIn {

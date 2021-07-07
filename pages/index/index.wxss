@@ -114,11 +114,11 @@ page {
   display: block;
   margin: 60rpx auto 20rpx auto;
   width: 480rpx;
-  height: 290rpx;
+  height: 320rpx;
   background-color: rgba(255, 255, 255, .03);
   overflow: hidden;
   border-radius: 8rpx;
-  box-shadow: 0 0 2px 0 rgba(255,255,255,.2);
+  box-shadow: 0 1px 2px 1px #222;
 }
 
 
@@ -127,9 +127,9 @@ page {
   font: normal normal normal 36rpx/36rpx sans-serif;
   color: #fff;
   font-weight: 400;
-  padding: 10rpx 0;
+  padding: 18rpx 0;
   box-sizing: border-box;
-  -webkit-box-reflect: below -10rpx linear-gradient(transparent 50%, #fff);
+  -webkit-box-reflect: below -30rpx linear-gradient(transparent 50%, #fff);
   z-index: 10;
 }
 
@@ -155,12 +155,16 @@ page {
 
 .iconquanping,
 .iconxuanze,
-.iconyouxi {
+.iconyouxi,
+.hconMore {
   font-size: 60rpx;
   color: #fff;
   opacity: 0;
   z-index: 0;
   transform-origin: left top;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .iconyouxi {
@@ -195,6 +199,31 @@ page {
   transform: translate(-50%, -50%);
 }
 
+.hconMore {
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0;
+}
+
+.email{
+  text-decoration: underline;
+}
+
+.moreBlock {
+  background-color: transparent;
+  width: 44%;
+  height: 44%;
+  box-sizing: border-box;
+  border: 4rpx solid #fff;
+  border-radius: 8rpx;
+  margin: 2% 0 0 2%;
+  float: left;
+}
+
+.moreBlock:nth-child(2) {
+  transform: rotateZ(0deg);
+}
+
 .fullText {
   animation: fullText 5s infinite;
   animation-fill-mode: both;
@@ -205,14 +234,93 @@ page {
   animation-fill-mode: both;
 }
 
+.moreIdea {
+  animation: moreIdea 5s infinite;
+  animation-fill-mode: both;
+}
+
 .game01 {
   animation: game01 5s infinite;
+  animation-fill-mode: both;
+}
+
+.moreIdeaBlock {
+  animation: moreIdeaBlock 5s infinite;
+  /* animation-delay: 2.5s; */
   animation-fill-mode: both;
 }
 
 .dotItemActive {
   width: 40rpx;
   transition: all .3s;
+}
+
+@keyframes moreIdeaBlock {
+  0% {
+    transform: translate(0%, 0%) rotateZ(0deg);
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  78% {
+    transform: scale(.9) translate(15%, -15%) rotateZ(45deg);
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  80% {
+    transform: scale(.9) translate(15%, -15%) rotateZ(45deg);
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  88% {
+    transform: scale(1) translate(0%, 0%) rotateZ(0deg);
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: translate(0%, 0%) rotateZ(0deg);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes moreIdea {
+  0% {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  10% {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  60% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  90% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
 }
 
 @keyframes game01 {

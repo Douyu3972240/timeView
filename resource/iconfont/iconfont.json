@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "22207724",
+      "name": "清空",
+      "font_class": "qingkong",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "19144830",
+      "name": "左边",
+      "font_class": "zuobian",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "21206879",
+      "name": "pointer",
+      "font_class": "pointer",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
       "icon_id": "8192135",
       "name": "全屏",
       "font_class": "quanping",

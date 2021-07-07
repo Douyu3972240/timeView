@@ -33,6 +33,19 @@ Page({
       second: 0
     }
   },
+  copyEmail() {
+    // 复制邮箱地址
+    wx.setClipboardData({
+      data: '1301326083@qq.com',
+      success: function () {
+        wx.hideToast()
+        wx.showToast({
+          title: '已成功复制',
+          icon: "none"
+        })
+      }
+    })
+  },
   changeSwiper(e) {
     console.log(e)
     this.setData({

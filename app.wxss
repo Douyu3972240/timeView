@@ -2,6 +2,22 @@
   width: 88%;
 }
 
+.linear-gradient1 {
+  background: -webkit-linear-gradient(45deg, #00A0E8, #6171C9) !important;
+}
+
+.linear-gradient2 {
+  background: -webkit-linear-gradient(45deg, #00C0D9, #00DBB2) !important;
+}
+
+.linear-gradient3 {
+  background: -webkit-linear-gradient(45deg, #00A0E8, #94ACE2) !important;
+}
+
+.linear-gradient4 {
+  background: -webkit-linear-gradient(45deg, #00DBB2, #8EEE87) !important;
+}
+
 .themeColor {
   color: #2179d4 !important;
 }
@@ -88,4 +104,8 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.break-all {
+  word-break: break-all
 }
