@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -11,6 +12,18 @@
     },
     "miniprogram": {
       "list": [
+        {
+          "name": "pages/autoSelect/autoSelect",
+          "pathName": "pages/autoSelect/autoSelect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/miniGame01/miniGame01",
+          "pathName": "pages/miniGame01/miniGame01",
+          "query": "",
+          "scene": null
+        },
         {
           "name": "pages/autoSelect/autoSelect",
           "pathName": "pages/autoSelect/autoSelect",

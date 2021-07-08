@@ -31,11 +31,12 @@
   <view style="text-align:center;margin:0px auto;" class="{{beginTime > 0 ? 'themeWidth' : ''}}">
     <view bindtap="reset" class="themeWidth beginChoose"
       style="{{beginTime > 0 && chooseArr.length > 0 ? 'width:40%;display:inline-block;opacity:1;' : 'width:0%;display:inline-block;float:left;opacity:0;'}}">
+      <text class="iconfont iconqingkong startChoose"></text>
       清空选项
     </view>
     <view bindtap="beginChoose" wx:if="{{chooseArr.length > 1}}" class="themeWidth beginChoose"
       style="{{beginTime > 0 ? 'width:40%;display:inline-block;margin-left:10%;' : ''}}">
-      <view class="iconfont iconpointer startChoose"></view>
+      <text class="iconfont iconpointer startChoose"></text>
       {{beginTime == 0 ? '开始帮我选择' : '帮我再选一次'}}
     </view>
   </view>
